@@ -1,23 +1,35 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://github.com/AndresSp/TCG-Ontology#"
      xml:base="https://github.com/AndresSp/TCG-Ontology"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:voaf="http://purl.org/vocommons/voaf#&quot;"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://github.com/AndresSp/TCG-Ontology">
-        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
-        <terms:contributor xml:lang="es">Andrés Tuñón</terms:contributor>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</owl:versionInfo>
-        <dc:description xml:lang="en">An ontology about Trading Card Games and the definition of its cards.</dc:description>
-        <dc:title xml:lang="en">TCG-Ontology</dc:title>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/AndresSp/TCG-Ontology/"/>
+        <vann:preferredNamespaceUri rdf:resource="https://github.com/AndresSp/TCG-Ontology/"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology describe the features of the Trading Card Games and general information of its principal forks: Collectible Card Game and Digital Collectible Card Game. Also described the necessary classes and properties for create a instancia of each card of a Trading Card Game. Future work include more card formats.</rdfs:comment>
+        <terms:contributor rdf:resource="https://github.com/AndresSp/TCG-Ontology#AndresTunon"/>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCG-Ontology</terms:title>
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
+        <terms:publisher rdf:resource="https://github.com/AndresSp/TCG-Ontology#AndresTunon"/>
+        <terms:creator rdf:resource="https://github.com/AndresSp/TCG-Ontology#AndresTunon"/>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tcg</vann:preferredNamespacePrefix>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCG-Ontology</rdfs:label>
-        <terms:contributor xml:lang="en">Andres Tunon</terms:contributor>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-Version 1.0: Creation</rdfs:comment>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology about the Trading Card Games and its cards.</terms:description>
     </owl:Ontology>
     
 
@@ -33,39 +45,21 @@
     
 
 
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/contributor -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
-        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:label xml:lang="en">Contributor</rdfs:label>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
-        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:label xml:lang="en">Creator</rdfs:label>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -75,18 +69,15 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights">
-        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:label xml:lang="en">Rights</rdfs:label>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
 
 
@@ -99,7 +90,11 @@
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:comment xml:lang="en-us">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Contributor</rdfs:label>
+        <skos:definition xml:lang="en-us">An entity responsible for making contributions to the resource.</skos:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
     </owl:AnnotationProperty>
     
 
@@ -107,71 +102,75 @@
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
-        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service.</terms:description>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creatorT-002"/>
-        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Creator</rdfs:label>
+        <skos:definition xml:lang="en-us">An entity primarily responsible for making the resource.</skos:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/contributor"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/date -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
     
 
 
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
-        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#descriptionT-001"/>
-        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Description</rdfs:label>
+        <skos:definition xml:lang="en-us">An account of the resource.</skos:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://purl.org/dc/terms/hasVersion -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
-    
-
-
     <!-- http://purl.org/dc/terms/issued -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#license-002"/>
-        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">License</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:label xml:lang="en-us">Date Issued</rdfs:label>
+        <skos:definition xml:lang="en-us">Date of formal issuance (e.g., publication) of the resource.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/modified -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:label xml:lang="en-us">Date Modified</rdfs:label>
+        <skos:definition xml:lang="en-us">Date on which the resource was changed.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher">
+        <rdfs:comment xml:lang="en-us">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Publisher</rdfs:label>
+        <skos:definition xml:lang="en-us">An entity responsible for making the resource available.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/rights -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights">
+        <rdfs:comment xml:lang="en-us">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Rights</rdfs:label>
+        <skos:definition xml:lang="en-us">Information about rights held in and over the resource.</skos:definition>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
     </owl:AnnotationProperty>
     
 
@@ -179,20 +178,81 @@
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:label xml:lang="en-us">Title</rdfs:label>
+        <skos:definition xml:lang="en-us">A name given to the resource.</skos:definition>
+        <skos:note xml:lang="en-us">In current practice, this term is used primarily with literal values; however, there are important uses with non-literal values as well. As of December 2007, the DCMI Usage Board is leaving this range unspecified pending an investigation of options.</skos:note>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
     </owl:AnnotationProperty>
     
 
 
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
     <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+        <rdfs:comment>the status of a vocabulary term, expressed as a short symbolic string; known values include &apos;unstable&apos;,&apos;testing&apos;, &apos;stable&apos; and &apos;archaic&apos;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+        <rdfs:label>term status</rdfs:label>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">note</rdfs:label>
+        <skos:definition xml:lang="en">A general note, for any purpose.</skos:definition>
+        <skos:scopeNote xml:lang="en">This property may be used directly, or as a super-property for more specific note types.</skos:scopeNote>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:comment xml:lang="en">A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The range of skos:prefLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">preferred label</rdfs:label>
+        <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language.</skos:definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
     
 
 
@@ -207,21 +267,15 @@
     
 
 
-    <!-- http://purl.org/dc/terms/ISO3166 -->
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#langString -->
 
-    <rdfs:Datatype rdf:about="http://purl.org/dc/terms/ISO3166">
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#ISO3166-004"/>
-        <rdfs:comment xml:lang="en">The set of codes listed in ISO 3166-1 for the representation of names of countries.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">ISO 3166</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html"/>
-    </rdfs:Datatype>
+    <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
     
 
 
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
 
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
     
 
 
@@ -236,46 +290,25 @@
     
 
 
-    <!-- http://purl.org/dc/terms/contributor -->
+    <!-- http://dbpedia.org/ontology/publisher -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/contributor">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/publisher">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Work"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Agent"/>
+        <rdfs:comment xml:lang="en">Publisher of a work. For literal (string) use dc:publisher; for object (URL) use publisher</rdfs:comment>
+        <rdfs:label xml:lang="de">Herausgeber</rdfs:label>
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+        <rdfs:label xml:lang="nl">uitgever</rdfs:label>
+        <rdfs:label xml:lang="el">εκδότης</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyProperty:publisher"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/dc/terms/rights -->
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/rights">
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/depiction -->
-
-    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/depiction">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
-        <rdfs:comment>A depiction of some thing.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
-        <rdfs:label>depiction</rdfs:label>
-        <ns:term_status>testing</ns:term_status>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/img -->
-
-    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/img">
-        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
-        <rdfs:comment>An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one&apos;s photo on a homepage).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
-        <rdfs:label>image</rdfs:label>
-        <ns:term_status>testing</ns:term_status>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith"/>
     
 
 
@@ -290,18 +323,58 @@
     
 
 
-    <!-- http://purl.org/dc/terms/date -->
+    <!-- http://dbpedia.org/ontology/title -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/title">
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+        <rdfs:label xml:lang="de">Titel</rdfs:label>
+        <rdfs:label xml:lang="it">denominazione</rdfs:label>
+        <rdfs:label xml:lang="nl">titel</rdfs:label>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+        <rdfs:label xml:lang="es">título</rdfs:label>
+        <rdfs:label xml:lang="el">Τίτλος</rdfs:label>
+        <rdfs:label xml:lang="ja">タイトル</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyProperty:title"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/dc/terms/title -->
+    <!-- http://dbpedia.org/ontology/year -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/year">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:label xml:lang="de">Jahr</rdfs:label>
+        <rdfs:label xml:lang="it">anno</rdfs:label>
+        <rdfs:label xml:lang="fr">année</rdfs:label>
+        <rdfs:label xml:lang="es">año</rdfs:label>
+        <rdfs:label xml:lang="nl">jaar</rdfs:label>
+        <rdfs:label xml:lang="en">year</rdfs:label>
+        <rdfs:label xml:lang="el">έτος</rdfs:label>
+        <rdfs:label xml:lang="sr">година</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyProperty:year"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>A name for some thing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>name</rdfs:label>
+        <vs:term_status>testing</vs:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#URL -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#URL">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-22T09:58:35Z</terms:date>
     </owl:DatatypeProperty>
     
 
@@ -317,73 +390,526 @@
     
 
 
-    <!-- http://purl.org/dc/terms/Agent -->
+    <!-- http://dbpedia.org/ontology/Activity -->
 
-    <owl:Class rdf:about="http://purl.org/dc/terms/Agent"/>
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Activity"/>
     
 
 
-    <!-- http://purl.org/dc/terms/RightsStatement -->
+    <!-- http://dbpedia.org/ontology/Agent -->
 
-    <owl:Class rdf:about="http://purl.org/dc/terms/RightsStatement"/>
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Agent"/>
     
 
 
-    <!-- http://schema.org/ImageObject -->
+    <!-- http://dbpedia.org/ontology/CardGame -->
 
-    <owl:Class rdf:about="http://schema.org/ImageObject">
-        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+    <owl:Class rdf:about="http://dbpedia.org/ontology/CardGame">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Game"/>
+        <rdfs:comment xml:lang="en">come from http://en.wikipedia.org/wiki/Category:Card_games</rdfs:comment>
+        <rdfs:label xml:lang="de">Kartenspiel</rdfs:label>
+        <rdfs:label xml:lang="en">card game</rdfs:label>
+        <rdfs:label xml:lang="es">juego de cartas</rdfs:label>
+        <rdfs:label xml:lang="nl">kaartspel</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyClass:CardGame"/>
     </owl:Class>
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Image -->
+    <!-- http://dbpedia.org/ontology/CollectionOfValuables -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Image"/>
+    <owl:Class rdf:about="http://dbpedia.org/ontology/CollectionOfValuables">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Work"/>
+        <rdfs:comment xml:lang="en">Collection of valuables is a collection considered to be a work in itself)</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een verzameling van kostbaarheden, die als een werk beschouwd wordt ).</rdfs:comment>
+        <rdfs:label xml:lang="de">Kunst- und Wertsachenversammlung</rdfs:label>
+        <rdfs:label xml:lang="fr">collection d&apos;objets</rdfs:label>
+        <rdfs:label xml:lang="en">collection of valuables</rdfs:label>
+        <rdfs:label xml:lang="nl">verzameling van kostbaarheden</rdfs:label>
+        <rdfs:label xml:lang="ko">귀중품의 컬렉션</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyClass:CollectionOfValuables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Company -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Company">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+        <rdfs:label xml:lang="de">Unternehmen</rdfs:label>
+        <rdfs:label xml:lang="nl">bedrijf</rdfs:label>
+        <rdfs:label xml:lang="ga">comhlacht</rdfs:label>
+        <rdfs:label xml:lang="en">company</rdfs:label>
+        <rdfs:label xml:lang="es">empresa</rdfs:label>
+        <rdfs:label xml:lang="pt">empresa</rdfs:label>
+        <rdfs:label xml:lang="fr">entreprise</rdfs:label>
+        <rdfs:label xml:lang="el">εταιρία</rdfs:label>
+        <rdfs:label xml:lang="ja">会社</rdfs:label>
+        <rdfs:label xml:lang="ko">회사</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyClass:Company"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Game -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Game">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q11410"/>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Activity"/>
+        <rdfs:comment xml:lang="en">a structured activity, usually undertaken for enjoyment and sometimes used as an educational tool</rdfs:comment>
+        <rdfs:label xml:lang="de">Spiel</rdfs:label>
+        <rdfs:label xml:lang="ga">cluiche</rdfs:label>
+        <rdfs:label xml:lang="en">game</rdfs:label>
+        <rdfs:label xml:lang="fr">jeu</rdfs:label>
+        <rdfs:label xml:lang="pt">jogo</rdfs:label>
+        <rdfs:label xml:lang="es">juego</rdfs:label>
+        <rdfs:label xml:lang="nl">spel</rdfs:label>
+        <rdfs:label xml:lang="el">Πληροφορίες παιχνιδιού</rdfs:label>
+        <rdfs:label xml:lang="ja">ゲーム</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyClass:Game"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Organisation -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Organisation">
+        <owl:equivalentClass rdf:resource="http://schema.org/Organization"/>
+        <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson"/>
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q43229"/>
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Agent"/>
+        <owl:disjointWith rdf:resource="http://dbpedia.org/ontology/wgs84_pos:SpatialThing"/>
+        <rdfs:label xml:lang="de">Organisation</rdfs:label>
+        <rdfs:label xml:lang="nl">organisatie</rdfs:label>
+        <rdfs:label xml:lang="en">organisation</rdfs:label>
+        <rdfs:label xml:lang="fr">organisation</rdfs:label>
+        <rdfs:label xml:lang="sl">organizacija</rdfs:label>
+        <rdfs:label xml:lang="es">organización</rdfs:label>
+        <rdfs:label xml:lang="pt">organização</rdfs:label>
+        <rdfs:label xml:lang="el">οργάνωση</rdfs:label>
+        <rdfs:label xml:lang="ru">Организация</rdfs:label>
+        <rdfs:label xml:lang="ja">組織</rdfs:label>
+        <rdfs:label xml:lang="ko">조직</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyClass:Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Publisher -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Publisher">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Company"/>
+        <rdfs:comment xml:lang="en">Publishing company</rdfs:comment>
+        <rdfs:label xml:lang="de">Herausgeber</rdfs:label>
+        <rdfs:label xml:lang="es">editor</rdfs:label>
+        <rdfs:label xml:lang="ga">foilsitheoir</rdfs:label>
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+        <rdfs:label xml:lang="nl">uitgever</rdfs:label>
+        <rdfs:label xml:lang="fr">éditeur</rdfs:label>
+        <rdfs:label xml:lang="el">εκδότης</rdfs:label>
+        <rdfs:label xml:lang="ja">出版社</rdfs:label>
+        <rdfs:label xml:lang="ko">출판사</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyClass:Publisher"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Work -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Work">
+        <owl:equivalentClass rdf:resource="http://schema.org/CreativeWork"/>
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q386724"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointWith rdf:resource="http://dbpedia.org/ontology/wgs84_pos:SpatialThing"/>
+        <rdfs:label xml:lang="de">Werk</rdfs:label>
+        <rdfs:label xml:lang="ga">obair</rdfs:label>
+        <rdfs:label xml:lang="pt">obra</rdfs:label>
+        <rdfs:label xml:lang="nl">werk</rdfs:label>
+        <rdfs:label xml:lang="en">work</rdfs:label>
+        <rdfs:label xml:lang="fr">œuvre</rdfs:label>
+        <rdfs:label xml:lang="el">δημιουργία</rdfs:label>
+        <rdfs:label xml:lang="ja">仕事</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://mappings.dbpedia.org/index.php/OntologyClass:Work"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/wgs84_pos:SpatialThing -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/wgs84_pos:SpatialThing"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:Class rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/AgentClass -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/AgentClass">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:comment xml:lang="en-us">Examples of Agent Class include groups seen as classes, such as students, women, charities, lecturers.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Agent Class</rdfs:label>
+        <skos:definition xml:lang="en-us">A group of agents.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- http://schema.org/CreativeWork -->
+
+    <owl:Class rdf:about="http://schema.org/CreativeWork"/>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+    <owl:Class rdf:about="http://schema.org/Organization"/>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Class -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    
+
+
+    <!-- http://www.w3.org/2000/10/swap/pim/contact#Person -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/10/swap/pim/contact#Person">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q11410 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q11410"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q386724 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q386724"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q43229 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q43229"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/Person -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:comment>A person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>Person</rdfs:label>
+        <vs:term_status>stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Project -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project"/>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Attribute -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Attribute">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:58:57Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Card -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Card">
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:52:22Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#CardLayout -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#CardLayout">
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:57:37Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#CardType -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#CardType">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T08:00:15Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#CollectibleCardGame -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#CollectibleCardGame">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/CardGame"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:51:51Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Color -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Color">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:03Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#DigitalCollectibleCardGame -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#DigitalCollectibleCardGame">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CollectibleCardGame"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:52:13Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#EffType -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#EffType">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:28Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Effect -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Effect">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:21Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Energy -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Energy">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:37Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Icon -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Icon">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:42Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#MagicTheGatheringCard -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#MagicTheGatheringCard">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:54:47Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#MonsterType -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#MonsterType">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:50Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#PokemonTCGCard -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#PokemonTCGCard">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:55:17Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Rarity -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Rarity">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:56Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Speed -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Speed">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:59Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Status -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Status">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T08:00:04Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Type -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Type">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T08:00:08Z</terms:date>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Yu-Gi-Oh!TCGCard -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Yu-Gi-Oh!TCGCard">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:54:27Z</terms:date>
+    </owl:Class>
     
 
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotations
+    // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
-        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service.</terms:description>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributorT-001"/>
-        <rdfs:label xml:lang="en">Contributor</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#dateT-001"/>
-        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
-        <rdfs:label xml:lang="en">Date</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/rights">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Rights</rdfs:label>
-        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rightsT-001"/>
-        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:label xml:lang="en">Title</rdfs:label>
-        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#titleT-002"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/Agent -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Agent">
+        <rdf:type rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        <rdf:type rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+        <rdfs:comment xml:lang="en-us">Examples of Agent include person, organization, and software agent.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Agent</rdfs:label>
+        <skos:definition xml:lang="en-us">A resource that acts or has the power to act.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#AndresTunon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#AndresTunon">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name xml:lang="es">Andrés Tuñón</foaf:name>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-22T07:48:03Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Konami -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Konami">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Publisher"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-24T08:47:03Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Yu-Gi-Oh!_Trading_Card_Game -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Yu-Gi-Oh!_Trading_Card_Game">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/CollectionOfValuables"/>
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#CollectibleCardGame"/>
+        <dbo:publisher rdf:resource="https://github.com/AndresSp/TCG-Ontology#Konami"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-24T08:41:05Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology/ -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
