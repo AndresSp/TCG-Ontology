@@ -379,6 +379,10 @@
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#cardBack">
         <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T03:04:27Z</terms:date>
     </owl:ObjectProperty>
     
 
@@ -397,6 +401,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasAttribute">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -407,6 +413,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasColor">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -417,6 +425,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasEffect">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -427,6 +437,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasEnergy">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -437,6 +449,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasIcon">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Icon"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -447,6 +461,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasRarity">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Rarity"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -457,6 +473,15 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasSpeed">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Card"/>
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Effect"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Speed"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -467,6 +492,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasStatus">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Status"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -477,8 +504,38 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hasType">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Card"/>
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Effect"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Ability"/>
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Type"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#image -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#image">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T03:02:43Z</terms:date>
     </owl:ObjectProperty>
     
 
@@ -487,16 +544,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#manaCost">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
-        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/AndresSp/TCG-Ontology#parameter -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#parameter">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -507,6 +556,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#resistance">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -517,6 +568,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#retreat">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -527,6 +580,8 @@
 
     <owl:ObjectProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#weakness">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:56:39Z</terms:date>
     </owl:ObjectProperty>
@@ -604,6 +659,8 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#amount">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -614,16 +671,10 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#atk">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://github.com/AndresSp/TCG-Ontology#cardBack -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#cardBack">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
     </owl:DatatypeProperty>
     
 
@@ -642,6 +693,8 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#def">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -652,6 +705,15 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#description">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Card"/>
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Effect"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -662,6 +724,8 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#flavorText">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -672,16 +736,8 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#hp">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
-        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://github.com/AndresSp/TCG-Ontology#image -->
-
-    <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#image">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -692,6 +748,8 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#level">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -701,9 +759,23 @@
     <!-- https://github.com/AndresSp/TCG-Ontology#name -->
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#name">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/name"/>
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#parameter -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#parameter">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T03:14:17Z</terms:date>
     </owl:DatatypeProperty>
     
 
@@ -712,6 +784,8 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#power">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -722,6 +796,8 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#rank">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -732,6 +808,8 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/AndresSp/TCG-Ontology#toughness">
         <rdfs:subPropertyOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardDataFeatures"/>
+        <rdfs:domain rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
     </owl:DatatypeProperty>
@@ -1046,6 +1124,17 @@
     
 
 
+    <!-- https://github.com/AndresSp/TCG-Ontology#Ability -->
+
+    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Ability">
+        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T10:31:06Z</terms:date>
+        <rdfs:label xml:lang="en">Ability</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://github.com/AndresSp/TCG-Ontology#Attribute -->
 
     <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Attribute">
@@ -1071,17 +1160,6 @@
     <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#CardLayout">
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:57:37Z</terms:date>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/AndresSp/TCG-Ontology#CardType -->
-
-    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#CardType">
-        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
-        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T08:00:15Z</terms:date>
-        <rdfs:label>Card Type</rdfs:label>
     </owl:Class>
     
 
@@ -1134,9 +1212,6 @@
 
     <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Effect">
         <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
-        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:21Z</terms:date>
-        <rdfs:label xml:lang="en">Effect</rdfs:label>
     </owl:Class>
     
 
@@ -1170,17 +1245,6 @@
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:54:47Z</terms:date>
         <rdfs:label>Magic: The Gathering Card</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/AndresSp/TCG-Ontology#MonsterType -->
-
-    <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#MonsterType">
-        <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardLayout"/>
-        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:59:50Z</terms:date>
-        <rdfs:label xml:lang="en">Monster Type</rdfs:label>
     </owl:Class>
     
 
@@ -1243,6 +1307,435 @@
     <!-- https://github.com/AndresSp/TCG-Ontology#Yu-Gi-Oh!TCGCard -->
 
     <owl:Class rdf:about="https://github.com/AndresSp/TCG-Ontology#Yu-Gi-Oh!TCGCard">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Card"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom rdf:resource="https://github.com/AndresSp/TCG-Ontology#Ability"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom rdf:resource="https://github.com/AndresSp/TCG-Ontology#Ability"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Tuner_MonsterType"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fusion_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Link_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Normal_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pendulum_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Ritual_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spell_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Synchro_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Token_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Trap_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Xyz_Type"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fusion_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Link_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Normal_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pendulum_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Ritual_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spell_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Synchro_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Token_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Trap_Type"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Xyz_Type"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Tuner_MonsterType"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Tuner_MonsterType"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType"/>
+                                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasType"/>
+                                        <owl:hasValue rdf:resource="https://github.com/AndresSp/TCG-Ontology#Normal_Type"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#level"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#rank"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#cardBack"/>
+                        <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasAttribute"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Dark_Attribute"/>
+                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine_Attribute"/>
+                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Earth_Attribute"/>
+                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Fire_Attribute"/>
+                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Light_Attribute"/>
+                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Water_Attribute"/>
+                                    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#Wind_Attribute"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasEffect"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasRarity"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/AndresSp/TCG-Ontology#Rarity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#hasStatus"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/AndresSp/TCG-Ontology#Status"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#image"/>
+                        <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#atk"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#def"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#description"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/AndresSp/TCG-Ontology#name"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-23T07:54:27Z</terms:date>
@@ -1274,6 +1767,18 @@
     
 
 
+    <!-- https://github.com/AndresSp/TCG-Ontology#Activates_from_your_Graveyard_Effect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Activates_from_your_Graveyard_Effect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:44:22Z</terms:date>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This Effect Type details every card whose effect activates in the Graveyard.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activates from your Graveyard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/AndresSp/TCG-Ontology#AndresTunon -->
 
     <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#AndresTunon">
@@ -1285,6 +1790,502 @@
     
 
 
+    <!-- https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Aqua_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:27:55Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aqua</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Artifact_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Artifact_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:37:13Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artifact</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Basic_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Basic_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:37:20Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast-Warrior_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:30:28Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beast-Warrior</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Beast_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:30:19Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Black_Color -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Black_Color">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:36:35Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Blue_Color -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Blue_Color">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:36:38Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#CardBackYugi_img -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#CardBackYugi_img">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:15:12Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://vignette.wikia.nocookie.net/yugioh/images/e/e5/Back-EN.png</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Common_Rarity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Common_Rarity">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Rarity"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:35:13Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Common</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Conspiracy_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Conspiracy_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:37:28Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conspirancy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Continuous-like_Effect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Continuous-like_Effect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T02:16:15Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Continuous_Icon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Continuous_Icon">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Icon"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:29:12Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Continuous_MonsterEffect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Continuous_MonsterEffect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:50:11Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Counter_Icon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Counter_Icon">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Icon"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:24:35Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#CreatorGod_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:30:38Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creator God</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Creature_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Creature_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:37:35Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Cyberse_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:30:46Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyberse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Dark_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Dark_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:57:58Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Darkness_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Darkness_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:24:51Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Dinosaur_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:31:10Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinosaur</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Discards_for_cost_Effect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Discards_for_cost_Effect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:39:10Z</terms:date>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This Effect Type details every card that discards card(s) to pay a cost.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discards for cost</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine-Beast_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:31:20Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Divine-Beast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Divine_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Divine_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:58:10Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Dragon_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:31:24Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dragon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Earth_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Earth_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:58:15Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Eaturecray_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Eaturecray_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:37:45Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eaturecray</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Effect_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Effect_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:22:26Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effect</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Enchantment_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Enchantment_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:37:59Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enchantment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Equip_Icon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Equip_Icon">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Icon"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:28:04Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Ever_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Ever_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:38:03Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ever</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Fairy_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:25:02Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Fairy_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:31:29Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fairy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Field_Icon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Field_Icon">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Icon"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:29:04Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Fiend_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:31:36Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiend</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Fighting_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Fighting_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:23:58Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Fire_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Fire_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:58:19Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Fire_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Fire_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:24:20Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Fish_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T23:26:36Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Flip_Ability -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Flip_Ability">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Ability"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T10:33:33Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Forbidden -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Forbidden">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Status"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:33:08Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Fusion_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Fusion_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:22:42Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Gemini_Ability -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Gemini_Ability">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Ability"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T10:33:15Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Grass_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Grass_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:24:25Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Host_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Host_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:38:07Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Host</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Ignition-like_Effect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Ignition-like_Effect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T02:15:37Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Insect_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:31:41Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insect</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Instant_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Instant_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:38:12Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/AndresSp/TCG-Ontology#Konami -->
 
     <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Konami">
@@ -1292,6 +2293,128 @@
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-24T08:47:03Z</terms:date>
         <rdfs:label>Konami</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Land_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Land_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:38:15Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Land</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Legendary_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Legendary_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:22:27Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legendary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Light_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Light_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:58:24Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Lighting_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Lighting_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:24:32Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Limited -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Limited">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Status"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:32:53Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Link_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Link_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:23:07Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Link</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Machina_Fortress -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Machina_Fortress">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Card"/>
+        <cardBack rdf:resource="https://github.com/AndresSp/TCG-Ontology#CardBackYugi_img"/>
+        <hasAttribute rdf:resource="https://github.com/AndresSp/TCG-Ontology#Earth_Attribute"/>
+        <hasEffect rdf:resource="https://github.com/AndresSp/TCG-Ontology#Machina_Fortress_Eff"/>
+        <hasRarity rdf:resource="https://github.com/AndresSp/TCG-Ontology#Ultra_Rare_Rarity"/>
+        <hasStatus rdf:resource="https://github.com/AndresSp/TCG-Ontology#Unlimited"/>
+        <hasType rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect_Type"/>
+        <hasType rdf:resource="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType"/>
+        <image rdf:resource="https://github.com/AndresSp/TCG-Ontology#Machina_Fortress_img"/>
+        <atk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</atk>
+        <def rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</def>
+        <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You can discard Machine monster(s) whose total Levels equal 8 or more, then Special Summon this card (from your hand or GY). If this card is destroyed by battle and sent to the GY: Target 1 card your opponent controls; destroy that target. Before resolving an opponent&apos;s monster effect that targets this face-up card, look at your opponent&apos;s hand and discard 1 card from their hand.</description>
+        <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</level>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Machina Fortress</name>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T10:49:08Z</terms:date>
+        <rdfs:label xml:lang="en">Machina Fortress</rdfs:label>
+        <rdfs:label xml:lang="es">Maquinaria Fortaleza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Machina_Fortress_Eff -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Machina_Fortress_Eff">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Effect"/>
+        <hasType rdf:resource="https://github.com/AndresSp/TCG-Ontology#Continuous_MonsterEffect"/>
+        <hasType rdf:resource="https://github.com/AndresSp/TCG-Ontology#Trigger_MonsterEffect"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:37:50Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Machina_Fortress_img -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Machina_Fortress_img">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:00:59Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://vignette.wikia.nocookie.net/yugioh/images/1/17/MachinaFortress-TF05-JP-VG.png</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Machine_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:33:27Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Machine</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1310,6 +2433,16 @@
     
 
 
+    <!-- https://github.com/AndresSp/TCG-Ontology#Metal_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Metal_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:24:56Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/AndresSp/TCG-Ontology#Nintendo -->
 
     <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Nintendo">
@@ -1317,6 +2450,93 @@
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-24T23:35:53Z</terms:date>
         <rdfs:label>Nintendo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Normal_Icon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Normal_Icon">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Icon"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:25:32Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Normal_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Normal_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:59:30Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Ongoing_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Ongoing_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:22:33Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ongoing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Pendulum_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Pendulum_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:23:02Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pendulum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Phenomenon_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Phenomenon_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:22:41Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenomenon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Plane_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Plane_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:22:46Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plane</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Planeswalker_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Planeswalker_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:22:54Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planeswalker</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Plant_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:33:34Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plant</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1336,6 +2556,561 @@
     
 
 
+    <!-- https://github.com/AndresSp/TCG-Ontology#Psychic_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:24:40Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Psychic_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:33:43Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psychic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Pyro_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:44:19Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pyro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Quick-Play_Icon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Quick-Play_Icon">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Icon"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:24:40Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Quick-like_Effect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Quick-like_Effect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T02:15:54Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Rare_Rarity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Rare_Rarity">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Rarity"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:35:17Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Red_Color -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Red_Color">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:36:42Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Reptile_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:44:27Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reptile</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Reveals_your_opponents_hand_Effect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Reveals_your_opponents_hand_Effect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:42:58Z</terms:date>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This Effect Type reveals cards in your opponent&apos;s hand.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reveals your opponent&apos;s hand</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Ritual_Icon -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Ritual_Icon">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Icon"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:24:54Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Ritual_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Ritual_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:22:37Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ritual</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Rock_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:44:32Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rock</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Scariest_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Scariest_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:22:59Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scariest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Scheme_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Scheme_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:23:04Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scheme</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#SeaSerpent_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:44:40Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sea Serpent</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Secret_Rare_Rarity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Secret_Rare_Rarity">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Rarity"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:36:20Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secret Rare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#See_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#See_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:23:08Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Semi-Limited -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Semi-Limited">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Status"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:32:44Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Snow_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Snow_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:23:12Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Snow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Sorcery_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Sorcery_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:23:17Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sorcery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Spell_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Spell_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:58:55Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Spell_Speed_1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Spell_Speed_1">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Speed"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:32:00Z</terms:date>
+        <rdfs:label>Spell Speed 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Spell_Speed_2 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Spell_Speed_2">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Speed"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:32:04Z</terms:date>
+        <rdfs:label>Spell Speed 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Spell_Speed_3 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Spell_Speed_3">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Speed"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:32:07Z</terms:date>
+        <rdfs:label>Spell Speed 3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Spell_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Spell_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:24:10Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spell</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Spellcaster_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:44:49Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spellcaster</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Spirit_Ability -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Spirit_Ability">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Ability"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T10:32:39Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Stage_1_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Stage_1_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:25:46Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stage 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Stage_2_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Stage_2_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:25:52Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stage 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Stage_Basic_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Stage_Basic_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:25:33Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Summon_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Summon_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:23:23Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Super_Rare_Rarity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Super_Rare_Rarity">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Rarity"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:36:08Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Super Rare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Synchro_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Synchro_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:22:49Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synchro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Thunder_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:44:54Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thunder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Token_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Token_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:23:11Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Token</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Toon_Ability -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Toon_Ability">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Ability"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T10:32:07Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Trap_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Trap_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:58:48Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Trap_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Trap_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:24:20Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trap</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Tribal_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Tribal_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:23:26Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tribal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Trigger-like_Effect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Trigger-like_Effect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T02:16:05Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Trigger_MonsterEffect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Trigger_MonsterEffect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:50:25Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Tuner_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Tuner_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:46:03Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tuner</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Ultra_Rare_Rarity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Ultra_Rare_Rarity">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Rarity"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:36:15Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ultra Rare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Union_Ability -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Union_Ability">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Ability"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T10:32:25Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Unlimited -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Unlimited">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Status"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:32:30Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Vanguard_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Vanguard_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:22:09Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vanguard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Warrior_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:45:00Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warrior</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Water_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Water_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:58:32Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Water_Energy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Water_Energy">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Energy"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:24:45Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#White_Color -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#White_Color">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Color"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:36:32Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Wind_Attribute -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Wind_Attribute">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Attribute"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T14:58:37Z</terms:date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#WingedBeast_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:45:22Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winged Beast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/AndresSp/TCG-Ontology#Wizards_of_the_Coast -->
 
     <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Wizards_of_the_Coast">
@@ -1343,6 +3118,73 @@
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-24T23:35:32Z</terms:date>
         <rdfs:label>Wizards of the Coast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#World_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#World_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:22:20Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Wyrm_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:45:30Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wyrm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Xyz_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Xyz_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T15:22:53Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xyz</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Youll_Type -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Youll_Type">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:23:33Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You&apos;ll</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Your_opponent_discards_Effect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Your_opponent_discards_Effect">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#EffType"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-26T11:40:41Z</terms:date>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This Effect Type details every card that discards a card(s) from your opponent&apos;s hand.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Your opponent discards</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology#Zombie_MonsterType">
+        <rdf:type rdf:resource="https://github.com/AndresSp/TCG-Ontology#Type"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T22:45:36Z</terms:date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zombie</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1366,22 +3208,6 @@
     <owl:NamedIndividual rdf:about="https://github.com/AndresSp/TCG-Ontology/">
         <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="https://github.com/AndresSp/TCG-Ontology#cardBack">
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T01:42:14Z</terms:date>
-        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrés Tuñón</terms:creator>
-        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-25T02:06:18Z</terms:date>
-    </rdf:Description>
 </rdf:RDF>
 
 
